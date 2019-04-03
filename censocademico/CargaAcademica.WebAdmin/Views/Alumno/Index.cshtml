@@ -1,0 +1,54 @@
+﻿@model IEnumerable<CargaAcademica.BL.Alumno>
+
+@{
+    ViewBag.Title = "Alumno";
+}
+
+<h2>Informatica</h2>
+
+<p>
+    @Html.ActionLink("Crear un alumno", "Crear")
+</p>
+<table class="table">
+    <tr>
+        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreAlumno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Activo)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            
+            <td>
+                <img src="@item.UrlImagen" alt="@item.NombreAlumno" style="max-width:64px; height:auto; "
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreAlumno)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Activo)
+            </td>
+
+            <td>
+                @Html.ActionLink("Editar", "Editar", new { id = item.Id }) |
+                @Html.ActionLink("Detalle", "Detalle", new { id = item.Id }) |
+                @Html.ActionLink("Eliminar", "Eliminar", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

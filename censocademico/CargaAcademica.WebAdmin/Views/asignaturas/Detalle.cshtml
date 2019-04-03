@@ -1,0 +1,50 @@
+﻿@model CargaAcademica.BL.Asignatura
+
+@{
+    ViewBag.Title = "Detalle";
+}
+
+<h2>Detalle</h2>
+
+<div>
+    <h4>Asignatura</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Seccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Seccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroEdificio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroEdificio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreAsignatura)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreAsignatura)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreCatedratico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreCatedratico)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

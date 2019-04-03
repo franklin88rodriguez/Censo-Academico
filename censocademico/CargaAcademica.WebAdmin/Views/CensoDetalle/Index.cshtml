@@ -1,0 +1,64 @@
+﻿@model CargaAcademica.BL.CensoMaestro
+
+@{
+    ViewBag.Title = "Detalle de Censo";
+}
+
+<h2>Detalle del Censo No: @Model.Id</h2>
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <td>Periodo</td>
+        <td>@Model.Periodo.año - @Model.Periodo.numero</td>
+    </tr>
+    <tr>
+        <td>Alumno</td>
+        <td>@Model.Alumno.NombreAlumno</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <img src="@Model.Alumno.UrlImagen" alt="@Model.Alumno.NombreAlumno" style="max-width: 150px"/>
+        </td>
+    </tr>
+    
+</table>
+
+<p>
+    @Html.ActionLink("Nuevo Asignatura", "Crear", new { id = Model.Id })
+</p>
+<table class="table">
+    <tr>
+        <th></th>
+        <th>
+            Asignatura
+        </th>
+        <th>
+            Horario
+        </th>
+        <th>
+           
+        </th>
+    </tr>
+
+    @foreach (var item in Model.ListadeCensoDetalle)
+    {
+        <tr>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Asignatura.NombreAsignatura)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Horario.Horario)
+            </td>
+            
+           
+            <td>
+                @Html.ActionLink("Eliminar", "Eliminar", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
+
+@Html.ActionLink("Regresar a Censo", "Index", "CensoMaestro")

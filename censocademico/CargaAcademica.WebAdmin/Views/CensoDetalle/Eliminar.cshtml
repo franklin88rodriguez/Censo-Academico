@@ -1,0 +1,48 @@
+﻿@model CargaAcademica.BL.CensoDetalle
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+
+<h2>Eliminar</h2>
+
+<h3>&iquest;Estas Seguro que quieres Eliminarlo?</h3>
+<div>
+    <h4>CensoDetalle</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Asignatura.Seccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Asignatura.Seccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CensoMaestro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CensoMaestro.Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Horario.Horario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Horario.Horario)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index", new { id = Model.CensoMaestroId })
+        </div>
+    }
+</div>
