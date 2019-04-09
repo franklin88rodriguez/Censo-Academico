@@ -29,7 +29,7 @@ namespace CargaAcademica.BL
         public List<Periodo> ObtenerPeriodosActivos()
         {
             ListadePeriodos = _contexto.Periodos
-                   .Where(r => r.Activo == true)
+                   //.Where(r => r.Activo == true)
                  .OrderBy(r => r.numero)
                 .ToList();
 

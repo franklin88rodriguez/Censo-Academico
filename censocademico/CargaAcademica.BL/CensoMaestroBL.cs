@@ -14,7 +14,7 @@ namespace CargaAcademica.BL
         public CensoMaestroBL()
         {
             _Contexto = new Contexto();
-            ListadeCenso = new List<CensoMaestro>();
+            ListadeCenso = new List<CensoMaestro>();            
         }
 
      

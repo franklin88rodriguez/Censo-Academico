@@ -1,14 +1,33 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Censo Academico UNAH-VS</title>
+
+    <!-- Bootstrap -->
+    <link href="~/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="~/assets/css/bootstrap-theme.css" rel="stylesheet">
+
+    <!-- siimple style -->
+    <link href="~/assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+      Theme Name: Siimple
+      Theme URL: https://bootstrapmade.com/free-bootstrap-landing-page/
+      Author: BootstrapMade
+      Author URL: https://bootstrapmade.com
+    ======================================================= -->
 </head>
+
 <body>
+    @RenderBody()
+    <!-- Fixed navbar -->
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -17,30 +36,69 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Universidad Nacional de Honduras", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <a class="navbar-brand" href="index.html"></a>
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>
-                        @Html.ActionLink("Inicio", "Index","Home")
-                    </li>
-                    <li>
-                        @Html.ActionLink("Lista de Asignaturas", "Index", "Asignaturas")
-                    </li>
-                </ul>
+
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+
+    <div id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1>Censo Academico UNAH-VS 2019</h1>
+                    <h2 class="subtitle">Inicio de Sesion</h2>
+                    <form class="form-inline signup" role="form">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Ingresa el numero de cuenta">
+                        </div>
+                        <button type="submit" class="btn btn-theme">Get it now</button>
+                    </form>
+                </div>
+                <div class="col-lg-4 col-lg-offset-2">
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        </ol>
+                        <!-- slides -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="~/assets/img/slide1.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="~/assets/img/slide2.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="~/assets/img/slide3.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="derechos reservados">&copy; UNAH-VS</p>
+                </div>
+                <div class="col-md-6">
+             
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="~/assets/js/bootstrap.min.js"></script>
 
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
 </body>
+
 </html>
