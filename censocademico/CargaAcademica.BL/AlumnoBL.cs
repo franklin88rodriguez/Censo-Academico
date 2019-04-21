@@ -53,6 +53,8 @@ namespace CargaAcademica.BL
                alumnoExistente.NombreAlumno = alumno.NombreAlumno;
                 alumnoExistente.UrlImagen = alumno.UrlImagen;
                 alumnoExistente.Activo = alumno.Activo;
+                alumnoExistente.Ncuenta = alumno.Ncuenta;
+
 
             }
 

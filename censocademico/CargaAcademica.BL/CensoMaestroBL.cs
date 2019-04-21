@@ -14,7 +14,8 @@ namespace CargaAcademica.BL
         public CensoMaestroBL()
         {
             _Contexto = new Contexto();
-            ListadeCenso = new List<CensoMaestro>();            
+            ListadeCenso = new List<CensoMaestro>();
+          
         }
 
      
@@ -83,6 +84,45 @@ namespace CargaAcademica.BL
             var Censo = _Contexto.CensosDetalles.Find(censoDetalle.CensoMaestroId);
 
             _Contexto.SaveChanges();
+        }
+      
+        //metodo para uso del censo exitoso
+        public void nuevoCenso(CensoMaestro censo)    
+        {
+
+
+            foreach (var detalle in censo.ListadeCensoDetalle)
+            {
+                if (detalle.HorarioId > 0)
+                {
+
+                    var nuevoCensoDetalle = new CensoDetalle();
+
+                    var asignaturaId = detalle.AsignaturaId;
+                    var horarioId = detalle.HorarioId;
+
+                    var CensoId = detalle.CensoMaestroId;
+
+                    nuevoCensoDetalle.HorarioId = horarioId;
+                    nuevoCensoDetalle.AsignaturaId = asignaturaId;
+                    nuevoCensoDetalle.CensoMaestroId = CensoId;
+
+
+                    _Contexto.CensosDetalles.Add(nuevoCensoDetalle);
+
+             
+               }
+
+               
+            }
+
+            _Contexto.SaveChanges();
+        }
+
+        public void censoDetalleExistente(CensoMaestro censo )
+        {
+
+
         }
         }
 }

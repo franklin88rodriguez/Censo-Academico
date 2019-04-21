@@ -24,6 +24,8 @@ namespace CargaAcademica.BL
         public string UrlImagen { get; set; }
 
         public bool Activo { get; set; }
+
+        public string Ncuenta { get; set; }
     }
 
 }

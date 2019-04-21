@@ -4,28 +4,20 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Inicio</h2>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm("Index", "Home", FormMethod.Post, new { style = "padding: 20px; background-color: rgba(3, 54, 119, 0.7);" })) 
 {
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>Alumno</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.Id, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Id, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Id, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
+    <h1>Censo Academico UNAH-VS 2019</h1>
+    <h2 class="subtitle">Inicio de Sesion</h2>
+    <div class="form-inline signup" role="form">
         <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Iniciar" class="btn btn-default" />
-            </div>
+            @Html.EditorFor(model => model.Id, new { htmlAttributes = new { @class = "form-control", placeholder = "Ingresa el numero de cuenta" } })
+            @Html.ValidationMessageFor(model => model.Id, "", new { @class = "text-danger" })
         </div>
+        <button type="submit" class="btn btn-theme">Iniciar</button>
     </div>
 }

@@ -7,17 +7,29 @@ using System.Web.Mvc;
 
 namespace CargaAcademicaInformatica.Controllers
 {
+    
+     
+        
     public class CensoController : Controller
     {
+        Contexto _Contexto;
         AlumnoBL _alumnosBL;
         AsignaturasBL _asignaturasBL;
         HorariosBL _horarioBL;
-
+        CensoMaestroBL _censoMaestroBL;
+      
+       
         public CensoController()
         {
+            _Contexto = new Contexto(); 
             _alumnosBL = new AlumnoBL();
             _asignaturasBL = new AsignaturasBL();
             _horarioBL = new HorariosBL();
+          
+            _censoMaestroBL = new CensoMaestroBL();
+
+       
+
         }
 
         public ActionResult Index(int id)
@@ -47,29 +59,20 @@ namespace CargaAcademicaInformatica.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(CensoMaestro censo)
+        public ActionResult Index (CensoMaestro censo)
         {
-            // Para guardar el censo debe recorrer la ListadeCensoDetalle y validar solo el horarioId > 0
-            // tambien debe borrar todo el censo detalle de un alumno antes de agregarlos de nuevo
-            // para borrar todo use 
-            //foreach (var detalle in censo.ListadeCensoDetalle)
-            //{
-            //    if (detalle.HorarioId > 0)
-            //    {
-            //          _Contexto.CensosDetalles.Remove(censoDetalleExistente);
-            //        ...
-            //        var asignaturaId = detalle.AsignaturaId;
-            //        var horarioId = detalle.HorarioId;
-            //        ...
-            //        _Contexto.CensosDetalles.Add(nuevoCenso);
-            //    }
-            //}
+            _censoMaestroBL.nuevoCenso(censo);
+                   
 
             return RedirectToAction("CensoExitoso");
+
         }
 
         public ActionResult CensoExitoso()
         {
+
+
+
             return View();
         }
 
