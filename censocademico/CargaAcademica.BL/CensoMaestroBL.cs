@@ -89,32 +89,36 @@ namespace CargaAcademica.BL
         //metodo para uso del censo exitoso
         public void nuevoCenso(CensoMaestro censo)    
         {
+            var censoExistente = _Contexto.CensosMaestros
+                .FirstOrDefault(r => r.AlumnoId == censo.AlumnoId && r.PeriodoId == censo.PeriodoId);
 
 
-            foreach (var detalle in censo.ListadeCensoDetalle)
+            if (censoExistente != null) {
+                _Contexto.CensosMaestros.Remove(censoExistente);
+            }
+
+            censo.ListadeCensoDetalle.RemoveAll(r => r.HorarioId == 0);
+
+            _Contexto.CensosMaestros.Add(censo);
+
+
+
+         /*   foreach (var detalle in censo.ListadeCensoDetalle)
             {
                 if (detalle.HorarioId > 0)
                 {
 
                     var nuevoCensoDetalle = new CensoDetalle();
-
                     var asignaturaId = detalle.AsignaturaId;
                     var horarioId = detalle.HorarioId;
-
                     var CensoId = detalle.CensoMaestroId;
-
                     nuevoCensoDetalle.HorarioId = horarioId;
                     nuevoCensoDetalle.AsignaturaId = asignaturaId;
                     nuevoCensoDetalle.CensoMaestroId = CensoId;
-
-
                     _Contexto.CensosDetalles.Add(nuevoCensoDetalle);
-
-             
-               }
-
-               
-            }
+                } fin del if
+              
+            } fin del for*/
 
             _Contexto.SaveChanges();
         }

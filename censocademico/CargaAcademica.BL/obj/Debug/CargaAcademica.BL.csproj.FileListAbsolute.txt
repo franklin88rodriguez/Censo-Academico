@@ -18,3 +18,13 @@ C:\Users\Franklin88\Desktop\L4\proyect\Franklin\censoacademico-master\censocadem
 C:\Users\Franklin88\Desktop\L4\proyect\Franklin\censoacademico-master\censocademico\CargaAcademica.BL\obj\Debug\CargaAcademica.BL.csprojResolveAssemblyReference.cache
 C:\Users\Franklin88\Desktop\L4\proyect\Franklin\censoacademico-master\censocademico\CargaAcademica.BL\obj\Debug\CargaAcademica.BL.dll
 C:\Users\Franklin88\Desktop\L4\proyect\Franklin\censoacademico-master\censocademico\CargaAcademica.BL\obj\Debug\CargaAcademica.BL.pdb
+C:\Users\Franklin88\Documents\GitHub\Censo---Academico\censocademico\CargaAcademica.BL\bin\Debug\CargaAcademica.BL.dll.config
+C:\Users\Franklin88\Documents\GitHub\Censo---Academico\censocademico\CargaAcademica.BL\bin\Debug\CargaAcademica.BL.dll
+C:\Users\Franklin88\Documents\GitHub\Censo---Academico\censocademico\CargaAcademica.BL\bin\Debug\CargaAcademica.BL.pdb
+C:\Users\Franklin88\Documents\GitHub\Censo---Academico\censocademico\CargaAcademica.BL\bin\Debug\EntityFramework.dll
+C:\Users\Franklin88\Documents\GitHub\Censo---Academico\censocademico\CargaAcademica.BL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Franklin88\Documents\GitHub\Censo---Academico\censocademico\CargaAcademica.BL\bin\Debug\EntityFramework.xml
+C:\Users\Franklin88\Documents\GitHub\Censo---Academico\censocademico\CargaAcademica.BL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Franklin88\Documents\GitHub\Censo---Academico\censocademico\CargaAcademica.BL\obj\Debug\CargaAcademica.BL.csprojResolveAssemblyReference.cache
+C:\Users\Franklin88\Documents\GitHub\Censo---Academico\censocademico\CargaAcademica.BL\obj\Debug\CargaAcademica.BL.dll
+C:\Users\Franklin88\Documents\GitHub\Censo---Academico\censocademico\CargaAcademica.BL\obj\Debug\CargaAcademica.BL.pdb

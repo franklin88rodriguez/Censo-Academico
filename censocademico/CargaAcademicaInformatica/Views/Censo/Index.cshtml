@@ -49,7 +49,10 @@
                     </td>
                 </tr>
             }
-        </table>
+            @Html.HiddenFor(model => model.PeriodoId )
+            @Html.HiddenFor(model => model.AlumnoId)
+
+            </table>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
