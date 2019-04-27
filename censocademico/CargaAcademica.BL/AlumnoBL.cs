@@ -68,6 +68,13 @@ namespace CargaAcademica.BL
             return alumno;
         }
 
+        public Alumno ObtenerAlumnoPorNcuenta(string ncuenta)
+        {
+            var alumno = _contexto.Alumnos.FirstOrDefault(r => r.Ncuenta == ncuenta);
+
+            return alumno;
+        }
+
         public void EliminarAlumno(int Id)
         {
             var alumno = _contexto.Alumnos.Find(Id);

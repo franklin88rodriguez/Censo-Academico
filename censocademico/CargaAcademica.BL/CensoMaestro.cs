@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,9 +11,12 @@ namespace CargaAcademica.BL
     {
         public int Id { get; set; }
 
+        [Display(Name = "Periodo")]
         public int PeriodoId { get; set; }
+
         public Periodo Periodo { get; set; }
 
+        [Display(Name="Alumno")]
         public int AlumnoId { get; set; }
         public Alumno Alumno { get; set; }
         public List<CensoDetalle> ListadeCensoDetalle { get; set; }
@@ -29,12 +33,12 @@ namespace CargaAcademica.BL
 
         public int CensoMaestroId { get; set; }
         public  CensoMaestro CensoMaestro  { get; set; }
-
+        [Display(Name = "Asignatura")]
         public int AsignaturaId { get; set; }
         public Asignatura Asignatura { get; set; }
 
-
-      public int HorarioId { get; set; }
+        [Display(Name = "Horario")]
+        public int HorarioId { get; set; }
         public Horarios Horario { get; set; }
 
 

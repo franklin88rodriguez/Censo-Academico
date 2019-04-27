@@ -24,12 +24,14 @@ namespace CargaAcademicaInformatica.Controllers
         [HttpPost]
         public ActionResult Index(Alumno alumno)
         {
-            var alumnoExistente = _alumnosBL.ObtenerAlumnos(alumno.Id);
+            var alumnoExistente = _alumnosBL.ObtenerAlumnoPorNcuenta(alumno.Ncuenta);
 
             if(alumnoExistente != null)
             {
-                return RedirectToAction("Index", "Censo", new { Id = alumno.Id });
+                return RedirectToAction("Index", "Censo", new { Id = alumnoExistente.Id });
             }
+
+            ModelState.AddModelError("Ncuenta", "Numero de cuenta no encontrado");
 
             return View();
         }

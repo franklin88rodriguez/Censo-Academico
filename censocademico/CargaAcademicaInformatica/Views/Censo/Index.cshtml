@@ -4,10 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
 
 
-@using (Html.BeginForm("Index", "Censo", FormMethod.Post, new { style = "padding: 20px; background-color: rgba(3, 54, 119, 0.7); color: #fff;" }))
+
+@using (Html.BeginForm("Index", "Censo", FormMethod.Post, new { style = "margin-top: 50px; padding: 20px; background-color: rgba(3, 54, 119, 0.7); color: #fff;" }))
 {
     @Html.AntiForgeryToken()
     
@@ -16,17 +16,26 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.PeriodoId, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.PeriodoId, htmlAttributes: new { @class = "col-md-2" })
+            <div style="margin-left: -15px;" class="col-md-10">
                 @Html.DisplayFor(model => model.PeriodoId, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.PeriodoId, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.AlumnoId, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.AlumnoId, htmlAttributes: new { @class = "col-md-2" })
+            
             <div class="col-md-10">
-                @Html.DisplayFor(model => model.Alumno.NombreAlumno, new { htmlAttributes = new { @class = "form-control" } })
+                <div class="row">
+                    <div style="float:left; ">
+                        @Html.DisplayFor(model => model.Alumno.NombreAlumno, new { htmlAttributes = new { @class = "form-control" } })
+
+                    </div>
+                    <div style="float:right; margin-right: 10px;">
+                        <img class="img-circle" src="@(ViewBag.adminWebsiteUrl + Model.Alumno.UrlImagen)" alt="" style="max-width:64px; height:auto;" />
+                    </div>
+                </div>
             </div>
         </div>
 

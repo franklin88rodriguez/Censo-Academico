@@ -4,9 +4,9 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Inicio</h2>
 
-@using (Html.BeginForm("Index", "Home", FormMethod.Post, new { style = "padding: 20px; background-color: rgba(3, 54, 119, 0.7);" })) 
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post, new { style = "margin-top: 50px;padding: 20px; background-color: rgba(3, 54, 119, 0.7);" })) 
 {
                 @Html.AntiForgeryToken()
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -15,8 +15,8 @@
     <h2 class="subtitle">Inicio de Sesion</h2>
     <div class="form-inline signup" role="form">
         <div class="form-group">
-            @Html.EditorFor(model => model.Id, new { htmlAttributes = new { @class = "form-control", placeholder = "Ingresa el numero de cuenta" } })
-            @Html.ValidationMessageFor(model => model.Id, "", new { @class = "text-danger" })
+            @Html.EditorFor(model => model.Ncuenta, new { htmlAttributes = new { @class = "form-control", placeholder = "Ingresa el numero de cuenta" } })
+            @Html.ValidationMessageFor(model => model.Ncuenta, "", new { @class = "text-danger" })
         </div>
         <button type="submit" class="btn btn-theme">Iniciar</button>
     </div>

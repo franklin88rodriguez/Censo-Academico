@@ -18,6 +18,8 @@ namespace CargaAcademica.BL
         [Required (ErrorMessage ="Ingrese el ID del alumno")]//validacion que no permite dejar vacio el campo Id
         public int Id { get; set; }
         [Required(ErrorMessage = "Este campo no puede quedar vacio")]
+
+        [Display(Name = "Nombre")]
         public string NombreAlumno { get; set; }
 
         [Display(Name ="Imagen")]
@@ -25,6 +27,7 @@ namespace CargaAcademica.BL
 
         public bool Activo { get; set; }
 
+        [Display(Name = "Numero de Cuenta")]
         public string Ncuenta { get; set; }
     }
 

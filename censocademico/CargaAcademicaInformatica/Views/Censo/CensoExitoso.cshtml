@@ -3,11 +3,16 @@
     ViewBag.Title = "CensoExitoso";
 }
 
-<h2 color="White">Censo Exitoso!</h2>
 
 
-<div>
-    @Html.ActionLink("Regresar al Inicio", "Index")
-</div>
 
+@using (Html.BeginForm("Index", "Home", FormMethod.Get, new { style = "margin-top:50px;padding: 20px; background-color: rgba(3, 54, 119, 0.7);" }))
+{
+    <h2 style="color:white">Censo Exitoso!</h2>
+
+
+    <div>
+        @Html.ActionLink("Regresar al Inicio", "Index", "Home")
+    </div>
+}
 
