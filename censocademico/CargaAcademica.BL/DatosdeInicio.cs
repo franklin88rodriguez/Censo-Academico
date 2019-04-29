@@ -14,7 +14,7 @@ namespace CargaAcademica.BL
 
             var nuevoUsuario = new Usuario();
 
-            nuevoUsuario.Nombre = "Admin";
+            nuevoUsuario.Nombre = "Franklin";
 
             nuevoUsuario.Contrasena = Encriptar.CodificarContrasena("123");
 
