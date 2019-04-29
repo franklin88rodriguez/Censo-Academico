@@ -7,6 +7,8 @@ using System.Web.Mvc;
 
 namespace CargaAcademica.WebAdmin.Controllers
 {
+
+    [Authorize]
     public class HorarioController : Controller
     {
         HorariosBL _HorarioBL;

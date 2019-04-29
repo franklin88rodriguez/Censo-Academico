@@ -19,6 +19,7 @@ namespace CargaAcademica.BL
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            Database.SetInitializer(new DatosdeInicio());//Agrega datos de inicio al momento de crear la BD
         }
 
         public DbSet<Asignatura> Asignaturas { get; set; }
@@ -31,6 +32,8 @@ namespace CargaAcademica.BL
 
         public DbSet<CensoMaestro> CensosMaestros { get; set; }// base de adato para mi clase maestro
      public DbSet<CensoDetalle> CensosDetalles { get; set; }// base para mi clase detalles
+
+        public DbSet<Usuario> Usuarios { get; set; }
 
 
 

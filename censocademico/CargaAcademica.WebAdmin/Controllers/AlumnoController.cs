@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace CargaAcademica.WebAdmin.Controllers//paso 4 controlador para las acciones html
 {
+    [Authorize]
     public class AlumnoController : Controller
     {
         AlumnoBL _AlumnoBL;

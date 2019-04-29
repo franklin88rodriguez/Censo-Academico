@@ -57,11 +57,14 @@
     <Compile Include="CensoMaestro.cs" />
     <Compile Include="CensoMaestroBL.cs" />
     <Compile Include="Contexto.cs" />
+    <Compile Include="DatosdeInicio.cs" />
     <Compile Include="Horarios.cs" />
     <Compile Include="HorariosBL.cs" />
     <Compile Include="PeridoBL.cs" />
     <Compile Include="Periodo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeguridadBL.cs" />
+    <Compile Include="Usuario.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
