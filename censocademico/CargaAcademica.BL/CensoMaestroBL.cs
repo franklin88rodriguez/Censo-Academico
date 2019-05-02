@@ -70,6 +70,7 @@ namespace CargaAcademica.BL
             var listadeCensos = _Contexto.CensosMaestros
                 .Include("Periodo")
                 .Include("Alumno")
+                //.Include("Asignaturas")
                 .ToList();
 
             return listadeCensos;
